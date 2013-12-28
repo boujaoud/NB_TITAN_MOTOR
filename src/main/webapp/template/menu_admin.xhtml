@@ -1,0 +1,40 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+  
+    <body>
+        <h:form>
+
+    <p:growl id="messages"/>
+    <p:menu  >
+        <p:submenu label="Administration">
+            <p:menuitem value="Import" actionListener="#" update="messages" icon="ui-icon-folder-open" />
+            <p:menuitem value="Export" actionListener="#" update="messages" icon="ui-icon-circle-arrow-s"/>
+            <p:menuitem value="Workflow" actionListener="#" update="messages" icon="ui-icon-person" />
+            <p:menuitem value="Droits d'accés" actionListener="#" update="messages" icon="ui-icon-suitcase"/>
+                
+        </p:submenu>
+        <p:submenu label="Colloborateurs">
+            <p:menuitem value="Nouveau" actionListener="#" update="messages" ajax="false" icon="ui-icon-plus"/>
+            <p:menuitem value="Liste" actionListener="#" update="messages" ajax="false" icon="ui-icon-calculator"/>
+            
+        </p:submenu>
+        <p:submenu label="Manager RH">
+            <p:menuitem value="Nouveau" actionListener="#"  icon="ui-icon-plus"/>
+            <p:menuitem value="Affectation" actionListener="#"  icon="ui-icon-pin-s"/>
+             <p:menuitem value="list" actionListener="#"  icon="ui-icon-calculator"/>
+        </p:submenu>
+         <p:submenu label="Connexion">
+            <p:menuitem value="logout" actionListener="#"  icon="ui-icon-arrowrefresh-1-w"/>
+           
+        </p:submenu>
+    </p:menu>
+
+    
+</h:form>
+                    
+			
+    </body>
+</html>

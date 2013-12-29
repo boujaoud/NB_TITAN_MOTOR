@@ -10,8 +10,8 @@
     <p:growl id="messages"/>
     <p:menu  >
         <p:submenu label="Administration">
-            <p:menuitem value="Import" actionListener="#" update="messages" icon="ui-icon-folder-open" />
-            <p:menuitem value="Export" actionListener="#" update="messages" icon="ui-icon-circle-arrow-s"/>
+            <p:menuitem value="Import"   actionListener="#{navigation.sr()}"  update=":formulaire:center"   icon="ui-icon-folder-open"/> 
+            <p:menuitem value="Export"  actionListener="#{navigation.sr()}"  update=":formulaire:center" icon="ui-icon-circle-arrow-s" ajax="true"/>
             <p:menuitem value="Workflow" actionListener="#" update="messages" icon="ui-icon-person" />
             <p:menuitem value="Droits d'accés" actionListener="#" update="messages" icon="ui-icon-suitcase"/>
                 

@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    
+    <body>
+        
+     <h:form id="form">
+		
+   
+         <p:panel header="Profiles > Nouveau">
+        <p:messages id="messages" showDetail="true" autoUpdate="true"/>
+
+        <h:panelGrid columns="2" id="matchGrid">                   
+            <h:outputLabel for="pr" value="Profile : *" />
+            <p:inputText id="pr" value="#{passwordBean.password5}" label="Profile " required="true"/>
+
+             <h:outputText value="Page Direction: " />
+        <p:selectManyCheckbox id="pageDirection" value="#{formBean.selectedOptions2}"
+            layout="pageDirection">
+            <f:selectItem itemLabel="adminstration" itemValue="Option 1" />
+            <f:selectItem itemLabel=" Gestion collobarteurs" itemValue="Option 2" />
+            <f:selectItem itemLabel=" Gestion RH" itemValue="Option 3" />
+            <f:selectItem itemLabel=" Reporting" itemValue="Option 4" />
+        </p:selectManyCheckbox>
+             
+        </h:panelGrid>
+    <p:panel header="Collaborateur :" style="margin-bottom:10px;">
+        <h:panelGrid columns="2" cellpadding="5">
+            <p:selectOneMenu id="nom_Collaborateur" value="#{pprBean.suburb}">
+                <f:selectItem itemLabel="Choisir Collaboreur" itemValue="" />
+                <f:selectItems value="#{pprBean.suburbs}" />
+            </p:selectOneMenu>
+        </h:panelGrid>
+
+        <p:separator />
+    </p:panel>
+
+        <p:commandButton id="saveButton" update="matchGrid" value="Enregistrer" />
+         </p:panel>
+</h:form>
+     </body>                     
+</html>

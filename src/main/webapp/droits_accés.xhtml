@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    
+    <body>
+        
+     <h:form>
+<p:panel header="Drois d'accés > Creer nouveau compte RH">
+    
+        <p:messages id="messages" showDetail="true" autoUpdate="true"/>
+ 
+     
+        <h:panelGrid columns="2" id="dra">                   
+            <h:outputLabel for="login" value="Login : *" />
+            <p:inputText id="login" value="#{passwordBean.password5}" label="Login " required="true"/>
+            
+            <h:outputLabel for="mdp" value="Mot de passe : *" />
+            <p:inputText id="mdp" value="#{passwordBean.password5}" label="Confirmer " required="true"/>
+            
+            <h:outputLabel for="mdp2" value="Confirmer mot de passe : *" />
+            <p:inputText id="mdp2" value="#{passwordBean.password5}" label="Confirmer " required="true"/>
+             </h:panelGrid>
+           
+            <p:selectOneMenu id="nom_Collaborateur" value="Collaboreur :">
+                <f:selectItem itemLabel="Choisir Collaboreur" itemValue="" />
+                <f:selectItems value="Collaboreur" />
+            </p:selectOneMenu>
+     <p:separator />   
+        <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5"> 
+  <p:commandButton id="saveButton" update="dra" value="Enregistrer" />
+  <p:commandButton id="Annuler" update="dra" value="Annuler" />
+        </h:panelGrid>
+       
+      </p:panel>
+         <p:spacer height="30"/>
+         
+     <p:panel header="Comptes > Activation/ Désactivation">   
+        <p:selectOneMenu id="compte" value="Comptes :">
+                <f:selectItem itemLabel="Choisir Comptes" itemValue="" />
+                <f:selectItems value="compte" />
+            </p:selectOneMenu>
+  
+     
+    <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
+
+        <h:outputText value="Activation/désactivation : " />
+        <p:selectOneButton value="#{buttonBean.number}">
+            <f:selectItem itemLabel="Activer le compte " itemValue="1" />
+            <f:selectItem itemLabel="Désactiver le compte" itemValue="2" />
+            
+        </p:selectOneButton>
+
+    </h:panelGrid>
+
+    <p:commandButton id="enr_com" update="dra" value="Enregistrer" />    
+        
+ </p:panel>
+        
+        	
+   
+         
+         
+</h:form>
+     </body>                     
+</html>

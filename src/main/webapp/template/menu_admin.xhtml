@@ -4,16 +4,16 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:p="http://primefaces.org/ui">
   
-    <body>
-        <h:form>
+   
+        
 
     <p:growl id="messages"/>
-    <p:menu  >
+    <p:menu >
         <p:submenu label="Administration">
-            <p:menuitem value="Import"   actionListener="#{navigation.sr()}"  update=":formulaire:center"   icon="ui-icon-folder-open"/> 
-            <p:menuitem value="Export"  actionListener="#{navigation.sr()}"  update=":formulaire:center" icon="ui-icon-circle-arrow-s" ajax="true"/>
-            <p:menuitem value="Workflow" actionListener="#" update="messages" icon="ui-icon-person" />
-            <p:menuitem value="Droits d'accés" actionListener="#" update="messages" icon="ui-icon-suitcase"/>
+            <p:menuitem value="Import"   actionListener="#{navigation.sr(true, false,false,false)}"  update=":formulaire:jamal"   icon="ui-icon-folder-open"/> 
+            <p:menuitem value="Export"  actionListener="#{navigation.sr(false,true,false,false)}"  update=":formulaire:jamal" icon="ui-icon-circle-arrow-s" ajax="true"/>
+            <p:menuitem value="Workflow" actionListener="#{navigation.sr(false,false,true,false)}" update=":formulaire:jamal" icon="ui-icon-person" />
+            <p:menuitem value="Droits d'accés" actionListener="#{navigation.sr(false,false,false,true)}" update=":formulaire:jamal" icon="ui-icon-suitcase"/>
                 
         </p:submenu>
         <p:submenu label="Colloborateurs">
@@ -33,8 +33,7 @@
     </p:menu>
 
     
-</h:form>
                     
 			
-    </body>
+   
 </html>

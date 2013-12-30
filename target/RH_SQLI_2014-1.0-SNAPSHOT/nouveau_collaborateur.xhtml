@@ -1,0 +1,66 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    
+     <h:form>
+    <p:panel header="Drois d'accés > Creer nouveau compte RH">
+       <h:panelGrid columns="4" id="dra"> 
+           
+        <h:outputLabel for="matricule" value="Matricule : *" />
+            <p:inputText id="matricule" value="" label="Matricule " required="true"/>
+            
+            <h:outputLabel for="nom" value="Nom Collaborateur : *" />
+            <p:inputText id="nom" value="" label="Nom Collaborateur " required="true"/>
+            
+            <h:outputLabel for="Prénom Collaborateur" value="Prénom Collaborateur : *" />
+            <p:inputText id="mdp2" value="" label="Confirmer " required="true"/>
+            
+            <h:outputLabel for="matricule" value="Matricule : *" />
+            <p:inputText id="matricule" value="" label="Matricule " required="true"/>
+            
+            <h:outputLabel for="nom" value="Nom Collaborateur : *" />
+            <p:inputText id="nom" value="" label="Nom Collaborateur " required="true"/>
+            
+            <h:outputLabel for="Prénom Collaborateur" value="Prénom Collaborateur : *" />
+            <p:inputText id="mdp2" value="" label="Confirmer " required="true"/>
+            
+            <h:outputLabel for="matricule" value="Matricule : *" />
+            <p:inputText id="matricule" value="" label="Matricule " required="true"/>
+            
+            <h:outputLabel for="nom" value="Nom Collaborateur : *" />
+            <p:inputText id="nom" value="" label="Nom Collaborateur " required="true"/>
+            
+            <h:outputLabel for="nom_Collaborateur" value="Nom Collaborateur : *" />
+             <p:selectOneMenu id="nom_Collaborateur" value="Collaboreur :">
+                <f:selectItem itemLabel="Choisir Collaboreur" itemValue="" />
+                <f:selectItems value="Collaboreur" />
+            </p:selectOneMenu>
+             
+            <h:outputLabel for="nom_Collaborateur" value="Nom Collaborateur : *" />
+             <p:selectOneMenu id="nom_Collaborateur" value="Collaboreur :">
+                <f:selectItem itemLabel="Choisir Collaboreur" itemValue="" />
+                <f:selectItems value="Collaboreur" />
+            </p:selectOneMenu>
+        </h:panelGrid>        
+            <p:selectOneMenu id="nom_Collaborateur" value="Collaboreur :">
+                <f:selectItem itemLabel="Choisir Collaboreur" itemValue="" />
+                <f:selectItems value="Collaboreur" />
+            </p:selectOneMenu>
+            
+      <p:separator />   
+        <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5"> 
+  <p:commandButton id="saveButton" update="dra" value="Enregistrer" />
+  <p:commandButton id="Annuler" update="dra" value="Annuler" />
+        </h:panelGrid>
+        
+        
+        
+        
+        
+    </p:panel>
+     </h:form>    
+    
+    
+</html>

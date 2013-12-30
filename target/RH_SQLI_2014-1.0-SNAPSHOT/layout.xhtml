@@ -36,7 +36,8 @@
 
 
         <h:body>
-<h:form id="formulaire">
+           
+            <h:form id="formulaire">
             <p:layout fullPage="true" >
 
                 <p:layoutUnit id="top" position="north" size="200" >
@@ -60,12 +61,14 @@
                
 
                 
-                <p:layoutUnit id="center" position="center">
-                    <h:form>
-
+                <p:layoutUnit  position="center">
+                       
+                   
+                    <p:outputPanel id="jamal">
                         <ui:insert name="contenu"></ui:insert>
-
-                    </h:form>
+                    
+                   </p:outputPanel>
+                   
                 </p:layoutUnit>
 
                 
@@ -73,9 +76,7 @@
                 
             </p:layout>
 </h:form>
-            <p:dialog header="Basic Dialog" widgetVar="dlg" modal="true">
-                <h:outputText value="Resistance to PrimeFaces is futile!" />
-            </p:dialog>
+          
 
         </h:body>
 

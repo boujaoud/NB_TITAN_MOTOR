@@ -6,20 +6,25 @@
       xmlns:p="http://primefaces.org/ui">
 
     <ui:composition template="layout.xhtml">
+         
         <ui:define name="contenu">
-<ui:fragment rendered="false">
+           
+<ui:fragment rendered="#{navigation.ab}">
 <ui:include src="import.xhtml"/>
 </ui:fragment>
-<ui:fragment rendered="false">
+<ui:fragment rendered="#{navigation.bc}">
 <ui:include src="export.xhtml"/>
 </ui:fragment>
-<ui:fragment rendered="false">
+<ui:fragment rendered="#{navigation.cd}">
 <ui:include src="workflow.xhtml"/>
 </ui:fragment>
-<ui:fragment rendered="true">
+<ui:fragment rendered="#{navigation.de}">
 <ui:include src="droits_accés.xhtml"/>
-</ui:fragment>           
-            
+</ui:fragment> 
+<ui:fragment rendered="true">
+<ui:include src="nouveau_collaborateur.xhtml"/>
+</ui:fragment> 
+          
         </ui:define>
       
     </ui:composition>
